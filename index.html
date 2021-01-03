@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Corona Virus Information</title>
+	<title>Coronavirus Information</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 	<style type="text/css">
 		p{
@@ -20,10 +20,10 @@
 		}
 		.list_world li{
 			width: 22%;
-			height: 350px;
+			height: 310px;
 
 			padding: 10px;
-			margin: 5px;
+			margin: 5px 10px 5px 0;
 
 			border: 1px dashed #000;
 			background: beige;
@@ -41,20 +41,19 @@
 <body>
 	<div class="content">
 		<div class="col-md-12">
-			<h3>Corona Virus Information Track</h3>
+			<h3>Coronavirus Information Track</h3>
 			<p>Link API coconavius: 
 				<a href="https://github.com/ExpDev07/coronavirus-tracker-api">
 					https://github.com/ExpDev07/coronavirus-tracker-api
 				</a>
 			</p>
 			<!-- one nation -->
-			<p>Theo dõi tình trạng corona virus tại <label id="title"></label></p>
+			<p>Theo dõi tình trạng coronavirus tại <b id="title"></b></p>
 			<select id="sel_nation"></select>
 
 			<table class="table table-striped">
 			   	<thead>
 			      <tr>
-			      	<th>ID</th>
 			      	<th>Mã QG</th>
 			        <th>Quốc gia</th>
 			        <th>Dân số</th>
@@ -67,7 +66,6 @@
 			    </thead>
 			    <tbody>
 			      <tr>
-			      	<td id="id"></td>
 			      	<td id="code"></td>
 			        <td id="nation"></td>
 			        <td id="population"></td>
@@ -81,10 +79,12 @@
 			  </table>
 			  <!-- world -->
 			  <div>
-			  	<h5>Tình trạng dịch trên thế giới</h5>
-			  	<div id="total_confirmed"></div>
-			  	<div id="total_deaths"></div>
-			  	<div id="total_recovered"></div>
+			  	<h4>Tình trạng dịch trên thế giới</h4>
+			  	<h5>
+			  		<div id="total_confirmed"></div>
+			  		<div id="total_deaths"></div>
+			  		<div id="total_recovered"></div>
+			  	</h5>
 			  </div>
 			  <!-- table detail-->
 			 <div id="list"></div>
@@ -96,5 +96,4 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
 </html> 
