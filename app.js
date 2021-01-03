@@ -14,7 +14,7 @@ function getVirusCountry(id) {
 		const tr         = (data.location.province != '')? " - " : '';
 		const province   = data.location.country + tr + data.location.province;
 
-		const idNation   = data.location.id;
+		//const idNation   = data.location.id;
 		const codeNation = data.location.country_code;
 		const nationName = data.location.country;
 		const population = data.location.country_population;
@@ -28,7 +28,7 @@ function getVirusCountry(id) {
 
 		document.getElementById("title").innerHTML      = province;
 
-		document.getElementById("id").innerHTML         = idNation;
+		//document.getElementById("id").innerHTML         = idNation;
 		document.getElementById("code").innerHTML       = codeNation;
 		document.getElementById("nation").innerHTML     = nationName;
 		document.getElementById("population").innerHTML = new Intl.NumberFormat().format(population);
@@ -68,7 +68,6 @@ function getVirusWorld(){
 				return `
 					 <ul class="list_world">
 					  	<li>
-					  		<p>id: ${idNation}</p>
 					  		<p>Mã quốc gia: ${codeNation}</p>
 					  		<p style="color: red">Quốc gia: ${nationName}</p>
 					  		<p style="color: blue">${province}</p>
@@ -81,6 +80,7 @@ function getVirusWorld(){
 					  	</li>
 					  </ul>
 				`
+			
 			}).join('');
 
 			document.getElementById("list").insertAdjacentHTML("afterbegin", html);
