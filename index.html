@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Corona Virus Information</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<style type="text/css">
+		p{
+			margin-bottom: 0.5rem;
+		}
+		select{
+			width: 350px;
+		}
+		.list_world{
+		    list-style: none;
+
+		    padding: 0;
+		    margin: 0;
+		}
+		.list_world li{
+			width: 22%;
+			height: 350px;
+
+			padding: 10px;
+			margin: 5px;
+
+			border: 1px dashed #000;
+			background: beige;
+
+			float: left;
+		}
+		table{
+			margin-top: 5px;
+		}
+		table tr{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="content">
+		<div class="col-md-12">
+			<h3>Corona Virus Information Track</h3>
+			<p>Link API coconavius: 
+				<a href="https://github.com/ExpDev07/coronavirus-tracker-api">
+					https://github.com/ExpDev07/coronavirus-tracker-api
+				</a>
+			</p>
+			<!-- one nation -->
+			<p>Theo dõi tình trạng corona virus tại <label id="title"></label></p>
+			<select id="sel_nation"></select>
+
+			<table class="table table-striped">
+			   	<thead>
+			      <tr>
+			      	<th>ID</th>
+			      	<th>Mã QG</th>
+			        <th>Quốc gia</th>
+			        <th>Dân số</th>
+			        <th>Trường hợp bị nhiễm</th>
+			        <th>Tử vong</th>
+			        <th>Hồi phục</th>
+			        <th>Cập nhật gần nhất</th>
+			        <th>% tử vong</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			      <tr>
+			      	<td id="id"></td>
+			      	<td id="code"></td>
+			        <td id="nation"></td>
+			        <td id="population"></td>
+			        <td id="confirmed"></td>
+			        <td id="deaths"></td>
+			        <td id="recovered"></td>
+			        <td id="update"></td>
+			        <td id="percent"></td>
+			      </tr>
+			    </tbody>
+			  </table>
+			  <!-- world -->
+			  <div>
+			  	<h5>Tình trạng dịch trên thế giới</h5>
+			  	<div id="total_confirmed"></div>
+			  	<div id="total_deaths"></div>
+			  	<div id="total_recovered"></div>
+			  </div>
+			  <!-- table detail-->
+			 <div id="list"></div>
+		</div>
+	</div>
+
+</body>
+<script type="text/javascript" src="app.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</html> 
